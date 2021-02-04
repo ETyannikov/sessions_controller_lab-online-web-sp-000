@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   
   def create
     @name = params[:name]
-    if !@name
+    if @name = nil
       session[:name] = @name
     else
       redirect_to login_url
