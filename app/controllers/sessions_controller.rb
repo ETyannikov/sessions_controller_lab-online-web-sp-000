@@ -10,8 +10,10 @@ class SessionsController < ApplicationController
     if !!@name
       session[:name] = @name
       redirect_to controller: 'application', action: 'hello'
+      binding.pry
     else
       redirect_to controller: 'sessions', action: 'new'
+      binding.pry
     end
   end
   
