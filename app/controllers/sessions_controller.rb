@@ -8,11 +8,11 @@ class SessionsController < ApplicationController
   def create
     @name = params[:name]
     if !!@name || @name == ""
-      session[:name] = @name
-      redirect_to controller: 'application', action: 'hello'
+      redirect_to controller: 'sessions', action: 'new'
       binding.pry
     else
-      redirect_to controller: 'sessions', action: 'new'
+      session[:name] = @name
+      redirect_to controller: 'application', action: 'hello'
       binding.pry
     end
   end
