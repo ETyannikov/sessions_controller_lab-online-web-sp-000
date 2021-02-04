@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   end
   
   def create
-    
+    if session[:username]
   end
   
   def destroy
