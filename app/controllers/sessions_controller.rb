@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:name] = @name
       redirect_to controller: 'application', action: 'hello'
     else
-      redirect_to controller: 'sessions', action: 'new'
+      redirect_to controller: 'sessions', action: 'login'
     end
   end
   
