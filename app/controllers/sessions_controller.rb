@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   
   def create
     @name = params[:name]
-    if @name != nil
+    if @name != nil 
       session[:name] = @name
       redirect_to controller: 'application', action: 'hello'
     else
