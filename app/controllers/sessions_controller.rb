@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if @name != nil
       session[:name] = @name
     else
-      redirect_to login_url
+      redirect_to new
     end
   end
   
