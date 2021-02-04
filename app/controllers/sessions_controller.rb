@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     if @name
       session[:name] = @name
     else
-      redirect_to login
+      redirect_to login_url
     end
   end
   
