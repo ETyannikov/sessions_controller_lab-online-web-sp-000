@@ -6,7 +6,11 @@ class SessionsController < ApplicationController
   
   def create
     @name = params[:name]
-    if @name || @name
+    if @name
+      session[:name] = @name
+    else
+      redirect_to login
+    end
   end
   
   def destroy
