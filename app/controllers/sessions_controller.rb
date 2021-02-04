@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   
   def create
     @name = params[:name]
-    if @name || @name.isblank?
+    if @name || @name
   end
   
   def destroy
